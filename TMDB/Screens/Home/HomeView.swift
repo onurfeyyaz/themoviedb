@@ -7,18 +7,29 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
+    @StateObject var viewModel: HomeViewModel = HomeViewModel()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            Button  {
+                Task {
+                    await viewModel.getMovies()
+                }
+            } label: {
+                Text("Get Movie")
+            }
+            .buttonStyle(.borderedProminent)
+
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    HomeView()
 }
