@@ -17,7 +17,9 @@ struct HomeView: View {
                 .foregroundStyle(.tint)
             Text("Hello, world!")
             Button  {
-                viewModel.getMovies()
+                Task {
+                    await viewModel.getMovies()
+                }
             } label: {
                 Text("Get Movie")
             }

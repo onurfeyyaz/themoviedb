@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DB95EE7E2C94E71B00948E4E /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DB95EE7D2C94E71B00948E4E /* Development.xcconfig */; };
-		DB95EE942C94F95C00948E4E /* NetworkLayer in Frameworks */ = {isa = PBXBuildFile; productRef = DB95EE932C94F95C00948E4E /* NetworkLayer */; };
+		DBCD85AA2C9A478100260BCF /* NetworkLayer in Frameworks */ = {isa = PBXBuildFile; productRef = DBCD85A92C9A478100260BCF /* NetworkLayer */; };
+		DBFA1F772C9A486A00DAA207 /* NetworkLayer in Frameworks */ = {isa = PBXBuildFile; productRef = DBFA1F762C9A486A00DAA207 /* NetworkLayer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DB2E19BB2C9A3B1800D47D02 /* Exceptions for "TMDB" folder in "TMDBTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Model/MovieDetails.swift,
+				Model/MovieDiscover.swift,
+				Model/MovieNowPlaying.swift,
+				Model/MoviePopular.swift,
+				Model/MovieTopRated.swift,
+				Model/MovieUpcoming.swift,
+				Network/MovieEndpoint.swift,
+				Utils/NetworkRequestProtocol.swift,
+			);
+			target = DB26FC992C84CBEE00A0E628 /* TMDBTests */;
+		};
 		DB95EE802C94E82A00948E4E /* Exceptions for "TMDB" folder in "TMDB" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -50,6 +65,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				DB95EE802C94E82A00948E4E /* Exceptions for "TMDB" folder in "TMDB" target */,
+				DB2E19BB2C9A3B1800D47D02 /* Exceptions for "TMDB" folder in "TMDBTests" target */,
 			);
 			path = TMDB;
 			sourceTree = "<group>";
@@ -71,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB95EE942C94F95C00948E4E /* NetworkLayer in Frameworks */,
+				DBCD85AA2C9A478100260BCF /* NetworkLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBFA1F772C9A486A00DAA207 /* NetworkLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +116,7 @@
 				DB26FC8C2C84CBEC00A0E628 /* TMDB */,
 				DB26FC9D2C84CBEE00A0E628 /* TMDBTests */,
 				DB26FCA72C84CBEE00A0E628 /* TMDBUITests */,
+				DB2E19B72C9A3A8C00D47D02 /* Frameworks */,
 				DB26FC8B2C84CBEC00A0E628 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,6 +129,13 @@
 				DB26FCA42C84CBEE00A0E628 /* TMDBUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DB2E19B72C9A3A8C00D47D02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +158,7 @@
 			);
 			name = TMDB;
 			packageProductDependencies = (
-				DB95EE932C94F95C00948E4E /* NetworkLayer */,
+				DBCD85A92C9A478100260BCF /* NetworkLayer */,
 			);
 			productName = TMDB;
 			productReference = DB26FC8A2C84CBEC00A0E628 /* TMDB.app */;
@@ -157,6 +182,7 @@
 			);
 			name = TMDBTests;
 			packageProductDependencies = (
+				DBFA1F762C9A486A00DAA207 /* NetworkLayer */,
 			);
 			productName = TMDBTests;
 			productReference = DB26FC9A2C84CBEE00A0E628 /* TMDBTests.xctest */;
@@ -218,7 +244,7 @@
 			mainGroup = DB26FC812C84CBEC00A0E628;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				DB95EE922C94F95C00948E4E /* XCLocalSwiftPackageReference "../NetworkLayer" */,
+				DBCD85A82C9A478100260BCF /* XCLocalSwiftPackageReference "../NetworkLayer" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DB26FC8B2C84CBEC00A0E628 /* Products */;
@@ -592,15 +618,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		DB95EE922C94F95C00948E4E /* XCLocalSwiftPackageReference "../NetworkLayer" */ = {
+		DBCD85A82C9A478100260BCF /* XCLocalSwiftPackageReference "../NetworkLayer" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../NetworkLayer;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DB95EE932C94F95C00948E4E /* NetworkLayer */ = {
+		DBCD85A92C9A478100260BCF /* NetworkLayer */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = NetworkLayer;
+		};
+		DBFA1F762C9A486A00DAA207 /* NetworkLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBCD85A82C9A478100260BCF /* XCLocalSwiftPackageReference "../NetworkLayer" */;
 			productName = NetworkLayer;
 		};
 /* End XCSwiftPackageProductDependency section */
